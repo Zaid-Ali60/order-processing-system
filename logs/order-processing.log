@@ -1,0 +1,907 @@
+2025-12-26 11:09:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:09:33 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 21.0.2 on ABC-633 with PID 14920 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:09:33 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:09:33 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:09:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:09:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:09:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:09:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:09:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:09:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1660 ms
+2025-12-26 11:09:35 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:09:36 [main] INFO  o.a.activemq.broker.BrokerService - Using Persistence Adapter: MemoryPersistenceAdapter
+2025-12-26 11:09:36 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-53474-1766727576354-0:1) is starting
+2025-12-26 11:09:36 [main] INFO  o.a.a.t.TransportServerThreadSupport - Listening for connections at: tcp://127.0.0.1:61616
+2025-12-26 11:09:36 [main] INFO  o.a.a.broker.TransportConnector - Connector tcp://127.0.0.1:61616 started
+2025-12-26 11:09:36 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-53474-1766727576354-0:1) started
+2025-12-26 11:09:36 [main] INFO  o.a.activemq.broker.BrokerService - For help or more information please see: http://activemq.apache.org
+2025-12-26 11:09:36 [main] WARN  o.a.activemq.broker.BrokerService - Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\Assignment\claud01\order-processing-system only has 18662 mb of usable space. - resetting to maximum available disk space: 18662 mb
+2025-12-26 11:09:36 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b4a3a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e848aea, org.springframework.security.web.context.SecurityContextPersistenceFilter@507049f2, org.springframework.security.web.header.HeaderWriterFilter@9e33a6a, org.springframework.security.web.authentication.logout.LogoutFilter@7cc1f72c, com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter@65bad087, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41bb1f09, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ed31735, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@786a3477, org.springframework.security.web.session.SessionManagementFilter@2347b7af, org.springframework.security.web.access.ExceptionTranslationFilter@56e5c8fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64fdcf99]
+2025-12-26 11:09:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:09:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-26 11:09:37 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) is starting
+2025-12-26 11:09:37 [main] INFO  o.a.c.s.b.CamelSpringBootApplicationListener - Starting CamelMainRunController to ensure the main thread keeps running
+2025-12-26 11:09:37 [CamelMainRunController] INFO  org.apache.camel.main.MainSupport - Apache Camel (Main) 3.22.0 is starting
+2025-12-26 11:09:37 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (started:2)
+2025-12-26 11:09:37 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started file-to-activemq-route (file://input/orders)
+2025-12-26 11:09:37 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started activemq-consumer-route (activemq://queue:ORDER.CREATED.QUEUE)
+2025-12-26 11:09:37 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) started in 419ms (build:51ms init:274ms start:94ms)
+2025-12-26 11:09:37 [main] INFO  c.c.o.OrderProcessingApplication - Started OrderProcessingApplication in 4.563 seconds (JVM running for 5.23)
+2025-12-26 11:10:42 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-26 11:10:42 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-26 11:10:42 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-26 11:10:42 [http-nio-8080-exec-1] INFO  c.c.o.controller.AuthController - Login attempt for user: admin
+2025-12-26 11:10:42 [http-nio-8080-exec-1] INFO  c.c.o.controller.AuthController - Login successful for user: admin
+2025-12-26 11:11:21 [http-nio-8080-exec-3] INFO  c.c.o.controller.OrderController - Received create order request: customerId=CUST1001, product=Laptop, amount=75000.0
+2025-12-26 11:11:21 [http-nio-8080-exec-3] INFO  c.c.o.service.OrderService - Order created successfully: OrderId=01163246-7118-4613-af8c-79d7acea7338, CustomerId=CUST1001, Amount=75000.0
+2025-12-26 11:11:21 [http-nio-8080-exec-3] INFO  c.c.o.service.OrderService - Order written to file: input/orders/order-01163246-7118-4613-af8c-79d7acea7338.json
+2025-12-26 11:11:25 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Picked up file: order-01163246-7118-4613-af8c-79d7acea7338.json
+2025-12-26 11:11:25 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Error processing file: order-01163246-7118-4613-af8c-79d7acea7338.json - Java 8 date/time type `java.time.LocalDateTime` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling
+ at [Source: (BufferedInputStream); line: 1, column: 123] (through reference chain: com.cashinvoice.orderprocessing.model.Order["createdAt"])
+2025-12-26 11:12:31 [http-nio-8080-exec-5] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:12:40 [http-nio-8080-exec-7] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:12:48 [http-nio-8080-exec-8] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:14:35 [http-nio-8080-exec-2] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:14:50 [http-nio-8080-exec-1] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:15:13 [http-nio-8080-exec-3] INFO  c.c.o.controller.AuthController - Login attempt for user: admin
+2025-12-26 11:15:13 [http-nio-8080-exec-3] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Empty encoded password
+2025-12-26 11:15:13 [http-nio-8080-exec-3] ERROR c.c.o.e.GlobalExceptionHandler - Unexpected error occurred
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:80)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:531)
+	at com.cashinvoice.orderprocessing.controller.AuthController.login(AuthController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:15:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:15:51 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 11 on ABC-633 with PID 21656 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:15:51 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:15:51 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:15:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:15:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:15:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:15:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:15:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:15:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3666 ms
+2025-12-26 11:15:55 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:15:57 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'brokerService' defined in class path resource [com/cashinvoice/orderprocessing/config/ActiveMQConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: NET_Bind
+2025-12-26 11:15:57 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-26 11:15:57 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-26 11:15:57 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'brokerService' defined in class path resource [com/cashinvoice/orderprocessing/config/ActiveMQConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: NET_Bind
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.cashinvoice.orderprocessing.OrderProcessingApplication.main(OrderProcessingApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: NET_Bind
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: NET_Bind
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:36)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:146)
+	at org.apache.activemq.transport.tcp.TcpTransportFactory.doBind(TcpTransportFactory.java:62)
+	at org.apache.activemq.transport.TransportFactorySupport.bind(TransportFactorySupport.java:40)
+	at org.apache.activemq.broker.BrokerService.createTransportConnector(BrokerService.java:2545)
+	at org.apache.activemq.broker.BrokerService.addConnector(BrokerService.java:348)
+	at org.apache.activemq.broker.BrokerService.addConnector(BrokerService.java:338)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig.brokerService(ActiveMQConfig.java:18)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$c69d5d3c.CGLIB$brokerService$1(<generated>)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$c69d5d3c$$FastClassBySpringCGLIB$$2305ae4c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$c69d5d3c.brokerService(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+Caused by: java.net.BindException: Address already in use: NET_Bind
+	at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+	at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:436)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:381)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:243)
+	at java.base/javax.net.DefaultServerSocketFactory.createServerSocket(ServerSocketFactory.java:231)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:143)
+	... 36 common frames omitted
+2025-12-26 11:16:28 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:16:28 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 21.0.2 on ABC-633 with PID 19644 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:16:28 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:16:28 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:16:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:16:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:16:30 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:16:30 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:16:30 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:16:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1809 ms
+2025-12-26 11:16:30 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:16:31 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'brokerService' defined in class path resource [com/cashinvoice/orderprocessing/config/ActiveMQConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: bind
+2025-12-26 11:16:31 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-26 11:16:31 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-12-26 11:16:31 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'brokerService' defined in class path resource [com/cashinvoice/orderprocessing/config/ActiveMQConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: bind
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.cashinvoice.orderprocessing.OrderProcessingApplication.main(OrderProcessingApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.activemq.broker.BrokerService]: Factory method 'brokerService' threw exception; nested exception is java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: bind
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.io.IOException: Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use: bind
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:36)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:146)
+	at org.apache.activemq.transport.tcp.TcpTransportFactory.doBind(TcpTransportFactory.java:62)
+	at org.apache.activemq.transport.TransportFactorySupport.bind(TransportFactorySupport.java:40)
+	at org.apache.activemq.broker.BrokerService.createTransportConnector(BrokerService.java:2545)
+	at org.apache.activemq.broker.BrokerService.addConnector(BrokerService.java:348)
+	at org.apache.activemq.broker.BrokerService.addConnector(BrokerService.java:338)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig.brokerService(ActiveMQConfig.java:18)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$54d6fb3e.CGLIB$brokerService$1(<generated>)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$54d6fb3e$$FastClassBySpringCGLIB$$55b18fee.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.cashinvoice.orderprocessing.config.ActiveMQConfig$$EnhancerBySpringCGLIB$$54d6fb3e.brokerService(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.Net.bind(Net.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+	at java.base/javax.net.DefaultServerSocketFactory.createServerSocket(ServerSocketFactory.java:231)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:143)
+	... 34 common frames omitted
+2025-12-26 11:17:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:17:41 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 21.0.2 on ABC-633 with PID 18508 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:17:41 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:17:41 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:17:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:17:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:17:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:17:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:17:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:17:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1624 ms
+2025-12-26 11:17:43 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:17:44 [main] INFO  o.a.activemq.broker.BrokerService - Using Persistence Adapter: MemoryPersistenceAdapter
+2025-12-26 11:17:44 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-54268-1766728064615-0:1) is starting
+2025-12-26 11:17:44 [main] INFO  o.a.a.t.TransportServerThreadSupport - Listening for connections at: tcp://127.0.0.1:61616
+2025-12-26 11:17:44 [main] INFO  o.a.a.broker.TransportConnector - Connector tcp://127.0.0.1:61616 started
+2025-12-26 11:17:44 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-54268-1766728064615-0:1) started
+2025-12-26 11:17:44 [main] INFO  o.a.activemq.broker.BrokerService - For help or more information please see: http://activemq.apache.org
+2025-12-26 11:17:44 [main] WARN  o.a.activemq.broker.BrokerService - Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\Assignment\claud01\order-processing-system only has 18662 mb of usable space. - resetting to maximum available disk space: 18662 mb
+2025-12-26 11:17:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3eac2e8a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@352f6727, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d67d5a4, org.springframework.security.web.header.HeaderWriterFilter@283a8ad6, org.springframework.security.web.authentication.logout.LogoutFilter@2e2b9f53, com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter@5e99b9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@600bbf9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71dd4624, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ab9e43e, org.springframework.security.web.session.SessionManagementFilter@c497a55, org.springframework.security.web.access.ExceptionTranslationFilter@5c9e8a67, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44384b4a]
+2025-12-26 11:17:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:17:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-26 11:17:45 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) is starting
+2025-12-26 11:17:46 [main] INFO  o.a.c.s.b.CamelSpringBootApplicationListener - Starting CamelMainRunController to ensure the main thread keeps running
+2025-12-26 11:17:46 [CamelMainRunController] INFO  org.apache.camel.main.MainSupport - Apache Camel (Main) 3.22.0 is starting
+2025-12-26 11:17:46 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (started:2)
+2025-12-26 11:17:46 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started file-to-activemq-route (file://input/orders)
+2025-12-26 11:17:46 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started activemq-consumer-route (activemq://queue:ORDER.CREATED.QUEUE)
+2025-12-26 11:17:46 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) started in 428ms (build:57ms init:274ms start:97ms)
+2025-12-26 11:17:46 [main] INFO  c.c.o.OrderProcessingApplication - Started OrderProcessingApplication in 4.601 seconds (JVM running for 5.184)
+2025-12-26 11:18:11 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-26 11:18:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-26 11:18:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-12-26 11:18:11 [http-nio-8080-exec-1] INFO  c.c.o.controller.AuthController - Login attempt for user: CUST1001
+2025-12-26 11:18:11 [http-nio-8080-exec-1] INFO  c.c.o.controller.AuthController - Login successful for user: CUST1001
+2025-12-26 11:18:39 [http-nio-8080-exec-3] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:19:35 [http-nio-8080-exec-4] INFO  c.c.o.controller.AuthController - Login attempt for user: admin
+2025-12-26 11:19:35 [http-nio-8080-exec-4] INFO  c.c.o.controller.AuthController - Login successful for user: admin
+2025-12-26 11:19:54 [http-nio-8080-exec-5] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:20:12 [http-nio-8080-exec-6] INFO  c.c.o.controller.OrderController - Received create order request: customerId=CUST1001, product=Mobile Phone, amount=45000.0
+2025-12-26 11:20:12 [http-nio-8080-exec-6] INFO  c.c.o.service.OrderService - Order created successfully: OrderId=09b54632-9cfb-4fb3-b91c-ccbf298135fd, CustomerId=CUST1001, Amount=45000.0
+2025-12-26 11:20:12 [http-nio-8080-exec-6] INFO  c.c.o.service.OrderService - Order written to file: input/orders/order-09b54632-9cfb-4fb3-b91c-ccbf298135fd.json
+2025-12-26 11:20:14 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Picked up file: order-09b54632-9cfb-4fb3-b91c-ccbf298135fd.json
+2025-12-26 11:20:14 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Error processing file: order-09b54632-9cfb-4fb3-b91c-ccbf298135fd.json - Java 8 date/time type `java.time.LocalDateTime` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling
+ at [Source: (BufferedInputStream); line: 1, column: 129] (through reference chain: com.cashinvoice.orderprocessing.model.Order["createdAt"])
+2025-12-26 11:20:41 [http-nio-8080-exec-7] INFO  c.c.o.controller.OrderController - Received get order request: orderId={{09b54632-9cfb-4fb3-b91c-ccbf298135fd}}
+2025-12-26 11:20:41 [http-nio-8080-exec-7] ERROR c.c.o.e.GlobalExceptionHandler - Order not found: Order not found with id: {{09b54632-9cfb-4fb3-b91c-ccbf298135fd}}
+2025-12-26 11:20:52 [http-nio-8080-exec-8] INFO  c.c.o.controller.OrderController - Received get order request: orderId=09b54632-9cfb-4fb3-b91c-ccbf298135fd
+2025-12-26 11:21:21 [http-nio-8080-exec-9] INFO  c.c.o.controller.OrderController - Received list orders request: customerId=CUST1001
+2025-12-26 11:21:34 [http-nio-8080-exec-10] INFO  c.c.o.controller.OrderController - Received create order request: customerId=CUST1001, product=Laptop, amount=75000.0
+2025-12-26 11:21:34 [http-nio-8080-exec-10] INFO  c.c.o.service.OrderService - Order created successfully: OrderId=8d99e1b9-1e31-427d-ab41-f7e9b955b66e, CustomerId=CUST1001, Amount=75000.0
+2025-12-26 11:21:34 [http-nio-8080-exec-10] INFO  c.c.o.service.OrderService - Order written to file: input/orders/order-8d99e1b9-1e31-427d-ab41-f7e9b955b66e.json
+2025-12-26 11:21:34 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Picked up file: order-8d99e1b9-1e31-427d-ab41-f7e9b955b66e.json
+2025-12-26 11:21:34 [Camel (order-processing-camel) thread #1 - file://input/orders] INFO  file-to-activemq-route - Error processing file: order-8d99e1b9-1e31-427d-ab41-f7e9b955b66e.json - Java 8 date/time type `java.time.LocalDateTime` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling
+ at [Source: (BufferedInputStream); line: 1, column: 123] (through reference chain: com.cashinvoice.orderprocessing.model.Order["createdAt"])
+2025-12-26 11:21:47 [http-nio-8080-exec-2] INFO  c.c.o.controller.OrderController - Received list orders request: customerId=CUST1001
+2025-12-26 11:27:28 [http-nio-8080-exec-4] ERROR c.c.o.e.GlobalExceptionHandler - Validation failed: {customerId=Customer ID must not be null or empty}
+2025-12-26 11:27:48 [http-nio-8080-exec-6] ERROR c.c.o.e.GlobalExceptionHandler - Validation failed: {product=Product must not be null or empty}
+2025-12-26 11:27:59 [http-nio-8080-exec-8] ERROR c.c.o.e.GlobalExceptionHandler - Validation failed: {amount=Amount must be greater than 0}
+2025-12-26 11:28:11 [http-nio-8080-exec-10] ERROR c.c.o.e.GlobalExceptionHandler - Validation failed: {amount=Amount must be greater than 0}
+2025-12-26 11:28:19 [http-nio-8080-exec-1] ERROR c.c.o.s.JwtAuthenticationFilter - Error extracting username from JWT
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractAllClaims(JwtUtil.java:49)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractClaim(JwtUtil.java:41)
+	at com.cashinvoice.orderprocessing.security.JwtUtil.extractUsername(JwtUtil.java:33)
+	at com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:37)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-26 11:28:23 [http-nio-8080-exec-3] INFO  c.c.o.controller.OrderController - Received get order request: orderId=invalid-order-id-12345
+2025-12-26 11:28:23 [http-nio-8080-exec-3] ERROR c.c.o.e.GlobalExceptionHandler - Order not found: Order not found with id: invalid-order-id-12345
+2025-12-26 11:34:24 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 11 on ABC-633 with PID 16204 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:34:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:34:24 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:34:24 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:34:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:34:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:34:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:34:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:34:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:34:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4198 ms
+2025-12-26 11:34:29 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:34:30 [main] INFO  o.a.activemq.broker.BrokerService - Using Persistence Adapter: MemoryPersistenceAdapter
+2025-12-26 11:34:30 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55717-1766729070705-0:1) is starting
+2025-12-26 11:34:30 [main] INFO  o.a.a.t.TransportServerThreadSupport - Listening for connections at: tcp://127.0.0.1:61616
+2025-12-26 11:34:30 [main] INFO  o.a.a.broker.TransportConnector - Connector tcp://127.0.0.1:61616 started
+2025-12-26 11:34:30 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55717-1766729070705-0:1) started
+2025-12-26 11:34:30 [main] INFO  o.a.activemq.broker.BrokerService - For help or more information please see: http://activemq.apache.org
+2025-12-26 11:34:30 [main] WARN  o.a.activemq.broker.BrokerService - Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\Assignment\claud01\order-processing-system only has 18662 mb of usable space. - resetting to maximum available disk space: 18662 mb
+2025-12-26 11:34:31 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79308a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11574592, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e39e0fb, org.springframework.security.web.header.HeaderWriterFilter@502c087e, org.springframework.security.web.authentication.logout.LogoutFilter@4d4b019e, com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter@67bb4dcd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@148ab138, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f305f34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@352e5a82, org.springframework.security.web.session.SessionManagementFilter@2eb6d34a, org.springframework.security.web.access.ExceptionTranslationFilter@4403bff8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7de6549d]
+2025-12-26 11:34:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:34:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-26 11:34:32 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) is starting
+2025-12-26 11:34:32 [main] INFO  o.a.c.s.b.CamelSpringBootApplicationListener - Starting CamelMainRunController to ensure the main thread keeps running
+2025-12-26 11:34:32 [CamelMainRunController] INFO  org.apache.camel.main.MainSupport - Apache Camel (Main) 3.22.0 is starting
+2025-12-26 11:34:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (started:2)
+2025-12-26 11:34:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started file-to-activemq-route (file://input/orders)
+2025-12-26 11:34:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started activemq-consumer-route (activemq://queue:ORDER.CREATED.QUEUE)
+2025-12-26 11:34:33 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) started in 815ms (build:87ms init:504ms start:224ms)
+2025-12-26 11:34:33 [main] INFO  c.c.o.OrderProcessingApplication - Started OrderProcessingApplication in 9.806 seconds (JVM running for 11.23)
+2025-12-26 11:34:56 [ActiveMQ ShutdownHook] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55717-1766729070705-0:1) is shutting down
+2025-12-26 11:34:56 [Camel (order-processing-camel) thread #2 - JmsConsumer[ORDER.CREATED.QUEUE]] WARN  o.a.c.c.j.DefaultJmsMessageListenerContainer - Setup of JMS message listener invoker failed for destination 'ORDER.CREATED.QUEUE' - trying to recover. Cause: java.io.EOFException
+2025-12-26 11:34:56 [ActiveMQ ShutdownHook] INFO  o.a.a.broker.TransportConnector - Connector tcp://127.0.0.1:61616 stopped
+2025-12-26 11:34:56 [ActiveMQ ShutdownHook] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55717-1766729070705-0:1) uptime 26.151 seconds
+2025-12-26 11:34:56 [ActiveMQ ShutdownHook] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55717-1766729070705-0:1) is shutdown
+2025-12-26 11:34:56 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) is shutting down (timeout:45s)
+2025-12-26 11:34:58 [Camel (order-processing-camel) thread #2 - JmsConsumer[ORDER.CREATED.QUEUE]] ERROR o.a.c.c.j.DefaultJmsMessageListenerContainer - Could not refresh JMS Connection for destination 'ORDER.CREATED.QUEUE' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+2025-12-26 11:34:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Routes stopped (stopped:2)
+2025-12-26 11:34:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext -     Stopped activemq-consumer-route (activemq://queue:ORDER.CREATED.QUEUE)
+2025-12-26 11:34:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext -     Stopped file-to-activemq-route (file://input/orders)
+2025-12-26 11:34:58 [SpringApplicationShutdownHook] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) shutdown in 2s36ms (uptime:25s)
+2025-12-26 11:37:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-12-26 11:37:08 [main] INFO  c.c.o.OrderProcessingApplication - Starting OrderProcessingApplication using Java 11 on ABC-633 with PID 4684 (D:\Assignment\claud01\order-processing-system\target\classes started by Zaidali in D:\Assignment\claud01\order-processing-system)
+2025-12-26 11:37:08 [main] DEBUG c.c.o.OrderProcessingApplication - Running with Spring Boot v2.7.14, Spring v5.3.29
+2025-12-26 11:37:08 [main] INFO  c.c.o.OrderProcessingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-26 11:37:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-12-26 11:37:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:37:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-26 11:37:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.78]
+2025-12-26 11:37:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-26 11:37:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3141 ms
+2025-12-26 11:37:11 [main] DEBUG c.c.o.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-12-26 11:37:12 [main] INFO  o.a.activemq.broker.BrokerService - Using Persistence Adapter: MemoryPersistenceAdapter
+2025-12-26 11:37:13 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55944-1766729232876-0:1) is starting
+2025-12-26 11:37:13 [main] INFO  o.a.a.t.TransportServerThreadSupport - Listening for connections at: tcp://127.0.0.1:61616
+2025-12-26 11:37:13 [main] INFO  o.a.a.broker.TransportConnector - Connector tcp://127.0.0.1:61616 started
+2025-12-26 11:37:13 [main] INFO  o.a.activemq.broker.BrokerService - Apache ActiveMQ 5.16.6 (localhost, ID:ABC-633-55944-1766729232876-0:1) started
+2025-12-26 11:37:13 [main] INFO  o.a.activemq.broker.BrokerService - For help or more information please see: http://activemq.apache.org
+2025-12-26 11:37:13 [main] WARN  o.a.activemq.broker.BrokerService - Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\Assignment\claud01\order-processing-system only has 18573 mb of usable space. - resetting to maximum available disk space: 18573 mb
+2025-12-26 11:37:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a2bb026, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7645e64, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c674d58, org.springframework.security.web.header.HeaderWriterFilter@74cd798f, org.springframework.security.web.authentication.logout.LogoutFilter@6dd20ec9, com.cashinvoice.orderprocessing.security.JwtAuthenticationFilter@29896529, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34beadce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e39e0fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7de6549d, org.springframework.security.web.session.SessionManagementFilter@1f71e024, org.springframework.security.web.access.ExceptionTranslationFilter@3ce7394f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17d2b646]
+2025-12-26 11:37:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-26 11:37:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-26 11:37:15 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) is starting
+2025-12-26 11:37:15 [main] INFO  o.a.c.s.b.CamelSpringBootApplicationListener - Starting CamelMainRunController to ensure the main thread keeps running
+2025-12-26 11:37:15 [CamelMainRunController] INFO  org.apache.camel.main.MainSupport - Apache Camel (Main) 3.22.0 is starting
+2025-12-26 11:37:15 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Routes startup (started:2)
+2025-12-26 11:37:15 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started activemq-consumer-route (activemq://queue:ORDER.CREATED.QUEUE)
+2025-12-26 11:37:15 [main] INFO  o.a.c.i.engine.AbstractCamelContext -     Started file-to-activemq-route (file://input/orders)
+2025-12-26 11:37:15 [main] INFO  o.a.c.i.engine.AbstractCamelContext - Apache Camel 3.22.0 (order-processing-camel) started in 804ms (build:102ms init:463ms start:239ms)
+2025-12-26 11:37:15 [main] INFO  c.c.o.OrderProcessingApplication - Started OrderProcessingApplication in 7.898 seconds (JVM running for 9.151)
